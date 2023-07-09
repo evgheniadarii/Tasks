@@ -16,8 +16,7 @@ public class RomanInteger {
         values.put('M', 1000);
 
         int result = 0; //initialize the result variable to store the final integer value
-        int prevValue = 0; // initializing the previous value variable to keep track of the previous
-        //numeral's value
+        int prevValue = 0; // initializing the previous value variable to keep track of the previous numeral's value
 
         //Iterating through the input string from right to left
         for( int i = s.length() - 1; i>= 0; i--) {
