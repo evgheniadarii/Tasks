@@ -12,8 +12,7 @@ public class ScoreCalculator {
                 "She sells seas shells by the sea shore",
                 "Bobby has a better string than I do",
                 "Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo"};
-
-        //creating a new HashMap with name scores that will keep the key=players and value=sentences
+        //creating a new HashMap with name scores that will keep the key=String and value=Integer
         Map<String, Integer> scores = new HashMap<>();
         //iterate through loop over the player's length
         for (int i = 0; i < players.length; i++) {
@@ -22,8 +21,10 @@ public class ScoreCalculator {
             int score = calculateScore(str);
             scores.put(player, score);
         }
-
+        //creating a new ArrayList named sortedScores and I will pass the entries of the scores map to its constructor.
         List<Map.Entry<String, Integer>> sortedScores = new ArrayList<>(scores.entrySet());
+        //sorting the sortedScores in descending order based on the values of the map entries
+        //then I use a Comparator to compare the values of the map entries in reversed order
         sortedScores.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
 
         for (Map.Entry<String, Integer> entry : sortedScores) {
@@ -31,9 +32,7 @@ public class ScoreCalculator {
             int score = entry.getValue();
             System.out.println(player + ": " + score);
         }
-
     }
-
     //creating a method that will calculate the score
     private static int calculateScore(String str) {
         int score = 0;
