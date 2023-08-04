@@ -33,3 +33,18 @@ Sample Input:
 125
 
   */
+
+/**
+ * Stdin (standard input)/ Stdout (standard output) => standard streams
+ *
+ * Intuition:
+ *This code read integers from the standard input (stdin) and print them on separate lines until there are no more
+ * integers left to read. It uses a while loop to keep reading integers as long as the input contains integers.
+ * Once there are no more integers, the loop terminates, and the code get to the scan.close() statement,
+ * that will close the Scanner object to free up resources.
+ *
+ * Time complexity:
+ * time complexity it is linear, because the code wil be read line by line, from input to the end.
+ * Time complexity is O(n), where n is the number of integers that are read from input.
+ *
+ */
